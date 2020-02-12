@@ -2,7 +2,6 @@
 import pygame
 from sys import exit
 #setup
-red = (255,0,0)
 win = pygame.display.set_mode((300,300))
 pygame.display.set_caption("tictactoe")
 circle = pygame.image.load('circle.png')
@@ -45,8 +44,8 @@ class board:
             self.endgame()
         #check diagonal top left to bottom right OR bottom left to top right
         elif(self.gridarray[0][0].state == self.gridarray[1][1].state == self.gridarray[2][2].state) or (self.gridarray[2][0].state == self.gridarray[1][1].state == self.gridarray[0][2].state):
-                print(playerstate + " wins by placing 3 diagonally")
-                self.endgame()
+            print(playerstate + " wins by placing 3 diagonally")
+            self.endgame()
         
                 
     def endgame(self):
